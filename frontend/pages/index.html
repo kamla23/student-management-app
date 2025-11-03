@@ -4,22 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students Management</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 <body>
-    <h1>Students Management App</h1>
-    
-    <div>
-        <input type="text" id="name" placeholder="Name">
-        <input type="number" id="age" placeholder="Age">
-        <input type="number" id="roll" placeholder="Roll">
-        <input type="text" id="subject" placeholder="Subject">
-        <input type="number" id="mark" placeholder="Mark">
-        <button id="btn">Add Student</button>
-    </div>
+    <div class="header">Student Management System</div>
+    <div class="manage">
+        <h2>Manage Students</h2>
+    <form class="mlist"> 
+        <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="" autocomplete="name"> 
+        </div>
+        
+        <div class="form-row">
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="">
+        </div>
+        
+        <div class="form-row">
+            <label for="roll">Roll</label>
+            <input type="number" id="roll" placeholder="">
+        </div>
+        
+        <div class="form-row">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" placeholder="">
+        </div>
+        
+        <div class="form-row">
+            <label for="gender">Gender</label>
+             <select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+             </select>
+        </div>
+        
+        <div class="form-row">
+            <label for="contact">Contact</label>
+            <input type="number" id="contact" placeholder="">
+        </div>
+        
+        <div class="form-row">
+            <label for="dob">Date Of Birth</label>
+            <input type="date" id="dob">
+        </div>
+        
+        <div class="form-row">
+            <label for="address">Address</label>
+            <input type="text" id="address" placeholder="">
+            
+        </div>
 
-    <div>
-        <h2>All Student</h2>
-        <ul id="list"></ul>
+     <div class="btn-group">
+        <button type="button" id="add">Add</button>
+        <button type="button" id="update">Update</button>
+        <button type="button" id="delete">Delete</button>
+        <button type="button" id="clear">Clear</button>
+      </div>
+    </form>
     </div>
+     <div class="right">
+            <h2>Search Students</h2>
+            <label for ="search-by">Search By:</label>
+            <select id="search-by">
+                <option>Name</option>
+                <option>Age</option>
+                <option>Roll</option>
+                <option>Gender</option>
+                <option>E-mail</option>
+                <option>D.O.B.</option>
+                <option>Address</option>
+            </select>
+            <input id="search" placeholder="Enter search term">
+            <button id="search-btn">Search</button>
+            <button id="show-btn">Show All</button>
+   
+        <table>
+        <thead>
+          <tr>
+            <th>Roll No.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Contact</th>
+            <th>DOB</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody id="student-table-body">
+                    <!-- Rows will appear here -->
+        </tbody>
+        <table>
+    </div>
+    <script src="../javascript/script.js"></script>
 </body>
 </html>
